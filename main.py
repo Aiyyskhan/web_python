@@ -1,10 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
-server = Flask(__name__)
+app = Flask(__name__)
 
-@server.route("/")
+@app.route("/")
 def index():
-    return render_template("index.html")
+    data = [] #'100', '200', '300', '400']
+    return render_template(
+        "index.html", 
+        name=request.args["name"], 
+        lastname=request.args["lastname"],
+        data=data)
 
 if __name__ == "__main__":
-    server.run(debug=True)
+    app.run(debug=True)

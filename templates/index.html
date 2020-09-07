@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hello, {{ name }} {{ lastname }}!</h1>
+    <ul>
+        {% if data %}
+            {% for i in data %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        {% else %}
+            <p>There are no data!</p>
+        {% endif %}
+    </ul>
+{% endblock %}
