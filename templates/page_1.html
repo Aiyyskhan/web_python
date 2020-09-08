@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="myplot"></div>
+    <div id="myplot2"></div>
+    <script>
+    fetch('/plot')
+        .then(function(response) { return response.json() })
+        .then(function(item) { return Bokeh.embed.embed_item(item) })
+    </script>
+    <script>
+    fetch('/plot2')
+        .then(function(response) { return response.json() })
+        .then(function(item) { return Bokeh.embed.embed_item(item, "myplot2") })
+    </script>
+    
+{% endblock %}
