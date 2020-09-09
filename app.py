@@ -41,7 +41,7 @@ def plot2():
 
 @app.route("/test")
 def test():
-    data = ['100', '200', '300', '400']
+    data = [] #'100', '200', '300', '400']
     return render_template(
         "test.html", 
         name=request.args["name"], 
@@ -50,4 +50,4 @@ def test():
     )
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
