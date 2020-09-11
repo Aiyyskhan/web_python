@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="static/cover.css" rel="stylesheet">
+
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.1.min.js" integrity="sha384-qkRvDQVAIfzsJo40iRBbxt6sttt0hv4lh74DG7OK4MCHv4C5oohXYoHUM5W11uqS" crossorigin="anonymous"></script> 
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.1.min.js" integrity="sha384-Sb7Mr06a9TNlet/GEBeKaf5xH3eb6AlCzwjtU82wNPyDrnfoiVl26qnvlKjmcAd+" crossorigin="anonymous"></script> 
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.1.min.js" integrity="sha384-HaJ15vgfmcfRtB4c4YBOI4f1MUujukqInOWVqZJZZGK7Q+ivud0OKGSTn/Vm2iso" crossorigin="anonymous"></script> 
     <script type="text/javascript"> Bokeh.set_log_level("info"); </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
 </head>
-<body>
-    {% block content %}{% endblock %}
+<body class="text-center">
+    <div class="cover-container d-flex w-auto h-100 p-3 mx-auto flex-column">
+
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">DREVO</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
+          </div>
+        </header>
+  
+        <main role="main" class="inner cover">
+            <div class="text-right">
+                <h1 class="cover-heading">DREVO project</h1>
+            </div>
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+  
+        <footer class="mastfoot mt-auto">
+          <div class="inner text-center">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          </div>
+        </footer>
+    
+    </div>
+    
 </body>
 </html>

@@ -41,6 +41,7 @@ def plot2():
 
 @app.route("/test")
 def test():
+    # for example: http://localhost:5000/test?name=Ivan&lastname=Ivanov
     data = [] #'100', '200', '300', '400']
     return render_template(
         "test.html", 

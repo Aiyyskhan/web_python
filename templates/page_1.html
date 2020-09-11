@@ -2,16 +2,28 @@
 
 {% block content %}
 
-    <div id="myplot"></div>
-    <div id="myplot2"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div id="myplot"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div id="myplot2"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
-    fetch('/plot')
-        .then(function(response) { return response.json() })
-        .then(function(item) { return Bokeh.embed.embed_item(item) })
+        fetch('/plot')
+            .then(function(response) { return response.json() })
+            .then(function(item) { return Bokeh.embed.embed_item(item) })
     </script>
     <script>
-    fetch('/plot2')
-        .then(function(response) { return response.json() })
-        .then(function(item) { return Bokeh.embed.embed_item(item, "myplot2") })
+        fetch('/plot2')
+            .then(function(response) { return response.json() })
+            .then(function(item) { return Bokeh.embed.embed_item(item, "myplot2") })
     </script>
+    
 {% endblock %}
