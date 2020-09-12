@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hello, {{ name }} {{ lastname }}!</h1>
+    <ul>
+        {% if data %}
+            {% for i in data %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        {% else %}
+            <p>There are no data!</p>
+        {% endif %}
+    </ul>
+{% endblock %}
