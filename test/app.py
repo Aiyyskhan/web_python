@@ -26,7 +26,7 @@ def make_plot(x, y):
 @app.route("/")
 def root():
     return render_template(
-        "page_1.html"
+        "index.html"
     )
 
 @app.route("/plot")
