@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
 /* body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191;} background-color:#232323;} */
 
 /*----------------------------------------------Generalise-------------------------------------*/
@@ -6,36 +8,52 @@
 /* #header, #container, #footer{display:block; width:960px; margin:0 auto;} */
 /* nav ul{margin:0; padding:0; list-style:none;} */
 
-div{
+div, header, footer{
     border: 1px solid #000;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper{
+  display:block; 
+  width:100%; 
+  margin:0; 
+  padding:0; 
+  text-align:center;
+}
+
+#header {
+  /* background: url('../pic_1.jpg') 0 0/100% auto no-repeat fixed; */
+  /* background: url('../pic_1.jpg') 0 0/cover no-repeat fixed; */
+  background-image: url('../pic_1.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200px;
+}
+
 .top-menu {
   display: block;
-  border: 1px solid #000;
-  background: rgba(255,255,255,.5);
-  box-shadow: 3px 0 7px rgba(0,0,0,.3);
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.699);
+  /* padding: 20px; */
+  height: 100%;
 }
 .navbar-logo {
   border: 1px solid #000;
   display: inline-block;
 }
 .menu-main {
-  /* display: block; */
-  border: 1px solid #000;
   list-style: none;
-  margin: 0; /*40px 10px 5px;*/
+  margin: 10px 10px; /*5px;*/
   padding: 10px 25px; /*25px 0 5px;*/
-  /* text-align: right; */
-  background: white;
+  /* background: white; */
   float: right;
 }
 .menu-main li {
   display: inline-block;
-  /* border: 1px solid #000; */
 }
+
 .menu-main li:after {
   content: "|";
   color: #606060;
@@ -44,6 +62,7 @@ div{
 .menu-main li:last-child:after {
   content: none;
 }
+
 .menu-main a {
   text-decoration: none;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -74,16 +93,13 @@ div{
   }
 }
 
-/* ----------------------------------------------Wrapper-------------------------------------*/
-
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:center;}
-
-/* .row1, .row1 a{color:#C0BAB6; background-color:#333333;}
-.row2{color:#979797; background-color:#FFFFFF;}
-.row2 a{color:#FF9900; background-color:#FFFFFF;} */
-/* .row3, .row3 a{color:#919191; background-color:#232323;} */
-
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{padding:20px 0;}
-#footer p{margin:0; padding:0;}
+#footer{
+  padding:20px 0;
+  text-align:center;
+}
+#footer p{
+  margin:0; 
+  padding:0;
+}
