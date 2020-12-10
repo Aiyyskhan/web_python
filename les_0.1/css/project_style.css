@@ -1,30 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 
-/* body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191;} background-color:#232323;} */
+  /* div, header, footer{
+      border: 1px solid #000;
+  } */
 
-/*----------------------------------------------Generalise-------------------------------------*/
-
-/* #header, #container, #footer{display:block; width:960px; margin:0 auto;} */
-/* nav ul{margin:0; padding:0; list-style:none;} */
-
-/* div, header, footer{
-    border: 1px solid #000;
-} */
-
-/* ----------------------------------------------Wrapper-------------------------------------*/
-
-div.wrapper{
-  display:block; 
-  width:100%; 
-  margin:0; 
-  padding:0; 
-  text-align:center;
+body{
+  height: auto;
+  width: auto;
 }
 
 /* ----------------------------------------------Header-------------------------------------*/
 
-#header {
+.header {
   /* background: url('../pic_1.jpg') 0 0/100% auto no-repeat fixed; */
   /* background: url('../pic_1.jpg') 0 0/cover no-repeat fixed; */
   /* background-image: url('../pic_1.jpg');
@@ -34,73 +22,100 @@ div.wrapper{
   background-attachment: fixed; */
   background-color: #232323;
   height: 100px;
+  position: relative;
 }
 
-.top-menu {
-  /* padding: 40px 0; */
-  display: block;
-  /* background: rgba(255, 255, 255, 0.699); */
-  /* padding: 20px; */
-  /* height: 100%; */
-}
-.navbar-logo {
+.header__logo {
   border: 1px solid #000;
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
-.menu-main {
-  /* list-style: none; */
-  margin: 10px 10px; /*5px;*/
-  padding: 10px 25px; /*25px 0 5px;*/
-  /* background: white; */
+.header__menu {
+  margin: 20px 30px; 
+  padding: 20px 25px;
   float: right;
 }
 
-.menu-main li {
+.header__menu li {
   display: inline-block;
 }
-.menu-main li:after {
+.header__menu li:after {
   content: "|";
   color: #606060;
   vertical-align:top;
 }
-.menu-main li:last-child:after {
+.header__menu li:last-child:after {
   content: none;
 }
 
-.menu-main a {
+.header__menu a {
   text-decoration: none;
   font-family: 'Ubuntu Condensed', sans-serif;
   letter-spacing: 2px;
   position: relative;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   margin: 0 34px 0 30px;
   font-size: 17px;
   text-transform: uppercase;
-  transition: color .2s;
+  /* transition: color .2s; */
 }
-.menu-main a{
+.header__menu a{
   color: #9d999d;
 } 
-.menu-main a:hover{
+.header__menu a:hover{
   color: #feb386;
 }
 
 /*----------------------------------------------Main-------------------------------------*/
-
-.content{
+.main{
   background: #b8b6b6;
-  color: #f0f8ff;
+  color: #232323;
+  height: 600px;
+  padding: 50px 0;
+}
+.content{
+  /* border: 2px solid black; */
+  max-width: 823px;
+  height: 100%;
+  margin: auto;
+  /* margin-inline: 5%; */
+  position: relative;
+}
+
+.content__image{
+  float: left;
+  width: 30%;
+  /* position: absolute; */
+}
+
+.content__image img{
+  /* height: 50%; */
+  width: 100%;
+}
+
+.content__body{
+  /* max-width: 500px; */
+  position: absolute;
+  margin-left: 35%;
+}
+
+.content__title{
+  margin: 0;
 }
 
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{
+.footer{
   background: #232323;
   color: #606060;
   padding:20px 0;
   text-align:center;
 }
-#footer p{
+.footer p{
   margin:0; 
   padding:0;
 }
+
+
