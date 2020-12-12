@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- блок "шапка" -->
+<header class="header">
+    <!-- блок навигации (меню) -->
+    <a class="header__logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+    <ul class="header__menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+</header>
+
+<div class="main">
+    <div class="content">
+        <!-- блок 2 -->
+        <div class="content__image">
+            <!-- тег изображения -->
+            <img src="static/pic_1.jpg" alt="картинки нет :(">
+        </div>
+
+        <!-- блок 3 -->
+        <div class="content__body">
+            <!-- заголовок 1 уровня -->
+            <h1 class="content__title">
+                Lorem ipsum dolor.
+            </h1>
+            <p class="content__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore quaerat nostrum praesentium quasi exercitationem sapiente nisi voluptatem. Eius, sapiente numquam. Sit praesentium itaque odit sapiente doloribus expedita dolorum ex.
+            </p>
+            <p class="content__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore quaerat nostrum praesentium quasi exercitationem sapiente nisi voluptatem. Eius, sapiente numquam. Sit praesentium itaque odit sapiente doloribus expedita dolorum ex.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- блок "подвал" -->
+<!-- Footer -->
+<footer class="footer">
+    <p class="fl_left">Copyright &copy; 2020 - All Rights Reserved</p> <!-- - <a href="#">Domain Name</a></p> -->
+    <p class="fl_right">Website by Aiyyskhan</p> <!-- <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p> -->
+</footer>
+
+{% endblock %}
