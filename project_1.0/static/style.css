@@ -1,14 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap'); */
   /* div, header, footer{
       border: 1px solid #000;
   } */
 
-body{
+/* body{
   height: auto;
   width: auto;
-}
+} */
 
 /* ----------------------------------------------Header-------------------------------------*/
 
@@ -21,6 +21,7 @@ body{
   background-size: cover;
   background-attachment: fixed; */
   background-color: #232323;
+  /* background-color: #0e3669; */
   height: 100px;
   position: relative;
 }
@@ -53,6 +54,7 @@ body{
 .header__menu a {
   text-decoration: none;
   font-family: 'Ubuntu Condensed', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   letter-spacing: 2px;
   position: relative;
   /* padding-bottom: 20px; */
