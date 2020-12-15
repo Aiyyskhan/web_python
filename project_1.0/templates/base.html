@@ -12,12 +12,19 @@
     <header class="header">
         <!-- блок навигации (меню) -->
         <!-- <a class="header__logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a> -->       
+
         <a class="header__logo" href="{{ url_for('index_page') }}"><img src="static/tree_1.png"></a>
-        <ul class="header__menu">
+
+        <!-- <ul class="header__menu">
             <li><a href="{{ url_for('index_page') }}">Home</a></li>
             <li><a href="{{ url_for('product_page') }}">Product</a></li>
             <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
-        </ul>
+        </ul> -->
+        <div class="header__menu">
+            <div><a href="{{ url_for('index_page') }}">Home</a></div>
+            <div><a href="{{ url_for('product_page') }}">Product</a></div>
+            <div><a href="{{ url_for('contact_page') }}">Contact</a></div>
+        </div>
     </header>
 
     {% block body %}

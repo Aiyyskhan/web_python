@@ -30,28 +30,44 @@
 .header__logo {
   /* border: 1px solid #000; */
   position: absolute;
-  top: 15px;
+  z-index: 1;
+  /* top: 15px; */
   left: 30px;
-  height: 70px;
-  width: 80px;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+}
+
+.header__logo a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .header__logo img {
   position: absolute;
-  top: auto;
-  left: auto;
-  height: 100%;
-  /* width: 100%; */
+  /* top: auto;
+  left: auto; */
+  /* height: 70%; */
+  width: 100%;
 }
 
 .header__menu {
-  margin: 20px 30px; 
-  padding: 20px 25px;
-  float: right;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* margin: 20px 30px; 
+  padding: 20px 25px; */
+  /* float: right; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.header__menu li {
-  display: inline-block;
+/* .header__menu li {
+  display: inline-flex;
 }
 .header__menu li:after {
   content: "|";
@@ -60,6 +76,18 @@
 }
 .header__menu li:last-child:after {
   content: none;
+} */
+
+/* .header__menu div {
+  display: inline-flex;
+} */
+.header__menu div:after {
+  content: "|";
+  color: #606060;
+  vertical-align:top;
+}
+.header__menu div:last-child:after {
+  content: none;
 }
 
 .header__menu a {
@@ -67,7 +95,7 @@
   font-family: 'Ubuntu Condensed', sans-serif;
   /* font-family: 'Roboto', sans-serif; */
   letter-spacing: 2px;
-  position: relative;
+  /* position: relative; */
   /* padding-bottom: 20px; */
   margin: 0 34px 0 30px;
   font-size: 17px;

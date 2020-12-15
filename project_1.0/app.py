@@ -14,13 +14,15 @@ def index_page():
 @app.route('/product')
 def product_page():
     return render_template(
-        "product.html"
+        "product.html",
+        the_title="My Site"
     )
 
 @app.route('/contact')
 def contact_page():
     return render_template(
-        "contact.html"
+        "contact.html",
+        the_title="My Site"
     )
 
 if __name__ == "__main__":
