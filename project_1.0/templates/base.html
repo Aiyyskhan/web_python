@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,27 @@
     <link rel="shortcut icon" href="static/favicon.ico">
 </head>
 <body>
+    <!-- блок "шапка" -->
+    <header class="header">
+        <!-- блок навигации (меню) -->
+        <!-- <a class="header__logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a> -->       
+        <a class="header__logo" href="{{ url_for('index_page') }}"><img src="static/tree_1.png"></a>
+        <ul class="header__menu">
+            <li><a href="{{ url_for('index_page') }}">Home</a></li>
+            <li><a href="{{ url_for('product_page') }}">Product</a></li>
+            <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+        </ul>
+    </header>
+
     {% block body %}
 
     {% endblock %}
+
+    <!-- блок "подвал" -->
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="fl_left">Copyright &copy; 2020 - All Rights Reserved</p> <!-- - <a href="#">Domain Name</a></p> -->
+        <p class="fl_right">Website by Aiyyskhan</p> <!-- <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p> -->
+    </footer>
 </body>
 </html>

@@ -23,16 +23,27 @@
   background-color: #232323;
   /* background-color: #0e3669; */
   height: 100px;
+  width: 100%;
   position: relative;
 }
 
 .header__logo {
-  border: 1px solid #000;
-  /* display: inline-block; */
+  /* border: 1px solid #000; */
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 30px;
+  height: 70px;
+  width: 80px;
 }
+
+.header__logo img {
+  position: absolute;
+  top: auto;
+  left: auto;
+  height: 100%;
+  /* width: 100%; */
+}
+
 .header__menu {
   margin: 20px 30px; 
   padding: 20px 25px;
@@ -74,7 +85,7 @@
 .main{
   background: #b8b6b6;
   color:#232323;
-  height: 600px;
+  height: 800px;
   padding: 50px 0;
 }
 
