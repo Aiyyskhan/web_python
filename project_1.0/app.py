@@ -5,7 +5,7 @@ import hashlib as h
 
 app = Flask(__name__)
 
-def hashing(origin_str, num_char=8):
+def hashing(origin_str, num_char):
     """
     Функция шифрования (хеширования)
     """
@@ -17,7 +17,11 @@ def hashing(origin_str, num_char=8):
     # шифрование - пропускание байт-строки через хеш-функция
     hash_str = h.sha256(byte_str)
     # преобразование в строку шестнадцатеричного числа (hex-числа)
-    hex_str = hash_str.hexdigest()[:num_char]
+    
+    if num_char == '-':
+        hex_str = hash_str.hexdigest()
+    else:
+        hex_str = hash_str.hexdigest()[:int(num_char)]
 
     # # передача хеш-строки
     # pwd_hash.set(hex_str)
@@ -43,9 +47,9 @@ def product_page():
     if request.method == 'POST':
         site = request.form.get('site')  # запрос к данным формы
         password = request.form.get('password')
-        num_char = int(request.form.get('num_char'))
+        num_char = request.form.get('num_char')
 
-        message = hashing(site+password, num_char)
+        message = hashing(password + site, num_char)
 
     return render_template('product.html', message=message)
 

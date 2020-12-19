@@ -124,7 +124,8 @@
 
 .content{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
   justify-content: center;
   /* border: 2px solid black; */
   max-width: 823px;
@@ -154,7 +155,8 @@
 
 .content form {
   border: 2px solid black;
-  width: 50%;
+  width: 80%;
+  padding: 20px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -183,7 +185,7 @@
   /* border: 2px dashed black; */
 
   margin: 10px 0;
-  width: 80%;
+  width: 90%;
   height: 50px;
 
   background-color: #7c7b7b;
