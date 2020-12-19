@@ -1,8 +1,28 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import hashlib as h
 
 # print(__name__)
 
 app = Flask(__name__)
+
+def hashing(origin_str, num_char=8):
+    """
+    Функция шифрования (хеширования)
+    """
+    # строка пароли
+    # origin_str = pwd.get()
+
+    # кодирование в байт-строку
+    byte_str = origin_str.encode()
+    # шифрование - пропускание байт-строки через хеш-функция
+    hash_str = h.sha256(byte_str)
+    # преобразование в строку шестнадцатеричного числа (hex-числа)
+    hex_str = hash_str.hexdigest()[:num_char]
+
+    # # передача хеш-строки
+    # pwd_hash.set(hex_str)
+
+    return hex_str
 
 @app.route('/')
 def index_page():
@@ -11,12 +31,23 @@ def index_page():
         the_title="My Site"
     )
 
-@app.route('/product')
+# @app.route('/product')
+@app.route('/product', methods=['post', 'get'])
 def product_page():
-    return render_template(
-        "product.html",
-        the_title="My Site"
-    )
+    # return render_template(
+    #     "product.html",
+    #     the_title="My Site"
+    # )
+
+    message = ''
+    if request.method == 'POST':
+        site = request.form.get('site')  # запрос к данным формы
+        password = request.form.get('password')
+        num_char = int(request.form.get('num_char'))
+
+        message = hashing(site+password, num_char)
+
+    return render_template('product.html', message=message)
 
 @app.route('/contact')
 def contact_page():

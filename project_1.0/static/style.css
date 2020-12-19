@@ -114,36 +114,42 @@
 .main{
   background: #b8b6b6;
   color:#232323;
-  height: 800px;
-  padding: 50px 0;
+  min-height: 500px;
+  padding: 10% 0;
 }
+
+/* div, form{
+  border: 2px solid black;
+} */
 
 .content{
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 2px solid black;
   max-width: 823px;
-  height: 50%;
+  /* height: 50%; */
   margin: auto;
   /* margin-inline: 5%; */
   position: relative;
 }
 
 .content__image{
-  float: left;
-  width: 30%;
-  position: absolute;
+  /* float: left; */
+  width: 400px;
+  height: 300px;
+  position: relative;
 }
 
 .content__image img{
-  /* height: 50%; */
+  height: auto;
   width: 100%;
 }
 
 .content__body{
-  /* max-width: 500px; */
-  position: absolute;
-  margin-left: 35%;
+  max-width: 500px;
+  height: 100%;
+  margin-left: 30px;
 }
 
 .content__title{
