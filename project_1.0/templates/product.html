@@ -19,16 +19,23 @@
                 <label>Число знаков</label>
                 <input type="text" name="num_char">
             </p>
-            <p>
+
+            <p class="content__button">
                 <input type="submit">
             </p>
+
+            <div class="content__output">
+                {% if message %}
+                    <h3>{{ message }}</h3>
+                {% endif %}
+            </div>
         </form>
-        <div>
+
+        <!-- <div class="content_2__output">
             {% if message %}
                 <h3>{{ message }}</h3>
             {% endif %}
-        </div>
-        
+        </div> -->
     </div>
 </div>
 
